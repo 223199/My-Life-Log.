@@ -221,7 +221,14 @@ export default function App() {
 
       <Card>
         <CardContent>
-          <Calendar selected={date} onSelect={setDate} renderDay={renderDay} />
+          <Calendar
+              selected={date}
+              onSelect={(d) => {
+                if (d) setDate(d);
+              }}
+              renderDay={renderDay}
+            />
+  
 
           {/* メモ */}
           <div className="mt-4 text-center max-w-md mx-auto relative">
