@@ -10,3 +10,12 @@ export default defineConfig({
     }
   }
 });
+
+export default defineConfig({
+  base: "/My-Life-Log./",
+  plugins: [react()],
+  resolve: {
+    alias: { "@": path.resolve(__dirname, "src") }
+  }
+});
+
