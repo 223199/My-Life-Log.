@@ -3,10 +3,9 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
-  base: "/My-Life-Log./",
+  base: "/My-Life-Log./", // ← リポジトリ名
   plugins: [react()],
   resolve: {
     alias: { "@": path.resolve(__dirname, "src") }
   }
 });
-
