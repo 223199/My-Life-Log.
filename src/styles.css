@@ -2,35 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ===== 人が作った感：焦げ茶×生成り ===== */
 :root {
   color-scheme: light;
+
+  --bg: #faf7f2;        /* 生成り */
+  --surface: #fffaf3;   /* 少し黄みの白 */
+  --text: #2b2b2b;      /* 真っ黒にしない */
+  --muted: #6b7280;
+  --primary: #4b342a;   /* 焦げ茶 */
+  --border: #e5dfd6;    /* 紙っぽい境界 */
 }
 
-/* ===== 人間寄りの配色 ===== */
-:root {
-  --bg: #faf7f2;        /* 生成り */
-  --text: #2b2b2b;     /* 少し柔らかい黒 */
-  --primary: #4b342a;  /* 焦げ茶 */
-  --border: #e5dfd6;   /* 紙っぽい境界線 */
+html, body {
+  height: 100%;
 }
 
 body {
+  margin: 0;
   background: var(--bg);
   color: var(--text);
   font-family: "Noto Sans JP", system-ui, -apple-system, sans-serif;
+  font-weight: 400;
 }
 
-/* カード感を抑える */
-.card {
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  box-shadow: none;
-}
-
-/* ボタンを主張しすぎない */
-button {
-  background: none;
+/* ここは“全体の雰囲気”だけ変える（機能に影響させない） */
+button, a {
   color: var(--primary);
 }
 
+/* もし白いカードが多いなら、少し生成りに寄せる（Tailwind bg-white対策） */
+.bg-white {
+  background-color: var(--surface) !important;
+}
 
+/* 薄い枠線の統一感 */
+.border, [class*="border-"] {
+  border-color: var(--border) !important;
+}
