@@ -40,3 +40,29 @@ button, a {
 .border, [class*="border-"] {
   border-color: var(--border) !important;
 }
+
+/* ===== 青い文字（リンクやTailwindのtext-blue系）を茶系に寄せる ===== */
+
+/* リンクの青を無効化 */
+a {
+  color: var(--primary) !important;
+}
+a:hover {
+  opacity: 0.85;
+}
+
+/* Tailwind の text-blue-*** を全部上書き（よく使われる範囲） */
+.text-blue-600,
+.text-blue-500,
+.text-blue-700,
+.text-sky-600,
+.text-indigo-600,
+.text-indigo-700,
+.text-indigo-500 {
+  color: var(--primary) !important;
+}
+
+/* もし “日付下の起床時間” が青なら、少し薄い茶にする */
+.text-blue-600 {
+  color: color-mix(in srgb, var(--primary) 70%, var(--muted) 30%) !important;
+}
