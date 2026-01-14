@@ -5,3 +5,30 @@
 :root {
   color-scheme: light;
 }
+
+/* ===== 人間寄りの配色 ===== */
+:root {
+  --bg: #faf7f2;        /* 生成り */
+  --text: #2b2b2b;     /* 少し柔らかい黒 */
+  --primary: #4b342a;  /* 焦げ茶 */
+  --border: #e5dfd6;   /* 紙っぽい境界線 */
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Noto Sans JP", system-ui, -apple-system, sans-serif;
+}
+
+/* カード感を抑える */
+.card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+/* ボタンを主張しすぎない */
+button {
+  background: none;
+  color: var(--primary);
+}
