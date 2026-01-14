@@ -66,3 +66,28 @@ a:hover {
 .text-blue-600 {
   color: color-mix(in srgb, var(--primary) 70%, var(--muted) 30%) !important;
 }
+
+/* ===== 青/インディゴ系 Tailwind を茶色に置換 ===== */
+[class*="text-blue-"],
+[class*="text-indigo-"],
+[class*="text-sky-"],
+[class*="text-cyan-"] {
+  color: var(--primary) !important;
+}
+
+[class*="bg-blue-"],
+[class*="bg-indigo-"],
+[class*="bg-sky-"],
+[class*="bg-cyan-"] {
+  background-color: var(--primary) !important;
+  color: #fff !important;
+}
+
+/* 枠線も青が残りやすい */
+[class*="border-blue-"],
+[class*="border-indigo-"],
+[class*="ring-blue-"],
+[class*="ring-indigo-"] {
+  border-color: var(--border) !important;
+  --tw-ring-color: rgba(75, 52, 42, 0.35) !important;
+}
